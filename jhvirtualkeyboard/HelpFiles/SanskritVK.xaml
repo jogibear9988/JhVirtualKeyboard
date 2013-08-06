@@ -1,0 +1,254 @@
+﻿<UserControl x:Class="JhVirtualKeyboard.HelpFiles.SanskritVKHelp"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                          xmlns:xcpt="http://schemas.xceed.com/wpf/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"  
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"       
+              
+             d:DesignHeight="400" d:DesignWidth="250">
+    <UserControl.Resources>
+        <LinearGradientBrush x:Key="myHeaderBrush" StartPoint="0,0" EndPoint="0.5,0.9" SpreadMethod="Reflect">
+            <GradientStop Color="#F0E0EAE0" Offset="0.1"/>
+            <GradientStop Color="#FFEFFAFF" Offset="0.5"/>
+            <GradientStop Color="#F0E0EAE0" Offset="0.9"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="myParagraphBrush" StartPoint="0,0" EndPoint="0.5,0.9" SpreadMethod="Reflect" >
+            <GradientStop Color="#EEE0EAE0" Offset="0.1"/>
+            <GradientStop Color="#FFDAE5DA" Offset="0.25"/>
+            <GradientStop Color="#FFEFFAFF" Offset="0.5"/>
+            <GradientStop Color="#EEDAE5DA" Offset="0.75"/>
+            <GradientStop Color="#EEE0EAE0" Offset="0.9"/>
+        </LinearGradientBrush>
+        <Style TargetType="Paragraph">
+            <Setter Property="Background" Value="{StaticResource myParagraphBrush}"/>
+            <Setter Property="TextBlock.FontFamily" Value="Calibri"/>
+            <Setter Property="TextAlignment" Value="Justify"/>
+        </Style>
+    </UserControl.Resources>
+    <Border BorderThickness="1" Margin="0"  Background="{StaticResource myParagraphBrush}">
+
+        <FlowDocumentPageViewer Name="FlowDocumentPageViewer1">
+            <FlowDocument>
+                <Table Margin="0" >
+                    <Table.Resources>
+                        <Style x:Key="TransText" TargetType="TableCell">
+                            <Setter Property="TextElement.FontSize" Value="18" />
+                            <Setter Property="TextElement.FontFamily" Value="Arial Unicode MS" />
+                            <Setter Property="TextAlignment" Value="Center"/>
+                            <Setter Property="Padding" Value="2,2"/>
+                            <Setter Property="BorderBrush" Value="Gray"/>
+                            <Setter Property="BorderThickness" Value="2,2"/>
+                            <Setter Property="FontWeight" Value="DemiBold"/>
+                        </Style>
+
+                        <Style x:Key="WideText" TargetType="TableCell">
+                            <Setter Property="TextElement.FontSize" Value="18" />
+                            <Setter Property="TextElement.FontFamily" Value="Arial Unicode MS" />
+                            <Setter Property="TextAlignment" Value="Center"/>
+                            <Setter Property="Padding" Value="2,2"/>
+                            <Setter Property="BorderBrush" Value="Gray"/>
+                            <Setter Property="BorderThickness" Value="2,2"/>
+                            <Setter Property="FontWeight" Value="DemiBold"/>
+                        </Style>
+                    </Table.Resources>
+                    <Table.Columns>
+                        <TableColumn Width="60"/>
+                        <TableColumn Width="60"/>
+                        <TableColumn  Width="60"/>
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>To Get</Paragraph>
+                            </TableCell>
+                            <TableCell  Style="{StaticResource TransText}">
+                                <Paragraph>Key</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>Key</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>क</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>क</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph></Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>क्</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>क</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x094D;</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>&#x0915;&#x093E;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0915;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x093E;</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>&#x0915;&#x093F;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0915;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x093F;</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>&#x0915;&#x0940;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0915;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0940;</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>&#x0915;&#x0941;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0915;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0941;</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>&#x0915;&#x0942;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0915;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0942;</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>&#x0915;&#x0943;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0915;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0943;</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>&#x0915;&#x0944;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0915;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0944;</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>&#x0915;&#x0947;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0915;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0947;</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>&#x0915;&#x0948;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0915;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0948;</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>&#x0915;&#x094B;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0915;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x094B;</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>&#x0915;&#x094C;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0915;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x094C;</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>&#x0915;&#x0902;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0915;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0902;</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>&#x0915;&#x0903;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0915;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0903;</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell Style="{StaticResource TransText}">
+                                <Paragraph>&#x0915;&#x0901;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0915;</Paragraph>
+                            </TableCell>
+                            <TableCell Style="{StaticResource WideText}">
+                                <Paragraph>&#x0901;</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+                <Paragraph>Similarly one can get all other Sanskrit Letters. Some letters like &#x915;&#x94D;&#x937; are a combination of &#x915; and &#x94D;&#x937;, and</Paragraph>
+            </FlowDocument>
+        </FlowDocumentPageViewer>
+    </Border>
+</UserControl>

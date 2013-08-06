@@ -1,0 +1,12 @@
+
+
+MessageBox Title: MyBizName MyApp:  MyCaption
+The Instruction to the User.1
+The Detail Text
+
+
+
+MessageBox Title: MyBizName MyApp:  MyCaption
+The Instruction to the User.1
+
+

@@ -1,0 +1,8 @@
+
+If the DetailText is empty, then the InstructionText should be centered over the entire text area and no space allocated to DetailText.
+
+2. Handle the case of there being no detail-text. Remove that TextBox if there is none, and adjust the InstructionText.
+   If the Instruction is short, then center it. Otherwise, ensure it fills the space reasonably.
+
+Within Cider, ensure the icon shows up for all messagebox types, and for both values of IsUsingDefaultOsIcons.
+

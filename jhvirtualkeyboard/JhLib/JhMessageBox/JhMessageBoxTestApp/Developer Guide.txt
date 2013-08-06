@@ -1,0 +1,87 @@
+
+These are the MessageBox.Show  method overloads, for reference:
+
+string messageBoxText
+string messageBoxText, string caption
+Window owner, string messageBoxText
+string messageBoxText, string caption, MessageBoxButton button
+Window owner, string messageBoxText, string caption
+string messageBoxText, string caption, MessageBoxButton button, MessageBoxImage icon
+Window owner, string messageBoxText, string caption, MessageBoxButton button
+string messageBoxText, string caption, MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult
+Window owner, string messageBoxText, string caption, MessageBoxButton button, MessageBoxImage icon
+string messageBoxText, string caption, MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult, JhMessageBoxOptions options
+Window owner, string messageBoxText, string caption, MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult
+Window owner, string messageBoxText, string caption, MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult, JhMessageBoxOptions optioins
+
+Because Silverlight does not seem to need the owner-window argument, I'm going to move that one to the last position.
+
+
+2012-06-05
+
+Advantages of using JhMessageBox:
+
+
+
+All message-boxes have a timeout, so that they do not freeze the user out of interacting with his desktop + it makes unit-testing with message-boxes possible.
+
+If the user moves his mouse within the message-box, then the timeout is postponed.
+
+All message-boxes correspond to one of a well-defined set of possible types, for simplicity.
+
+Two separate text areas are provided, for basic instruction and detailed text - which can be used for developer-only information.
+
+Text overflow results in scrollbars appearing to allow for scrolling through the text.
+
+User can right-click anywhere on the message-box to select "Copy" and the entire content of the message-box, including the title-bar text, is copied onto the clipboard.
+
+JhMessageBox is specifically designed to acommodate automated unit-testing for your programs. You can invoke the message-box in an asynchronous or shortened-timeout manner, then call methods that specifically test for the presence of a message-box, buttons and text patterns within the message-box, and returned results. Your test-case can be for each possible user action, such as "User clicks on Cancel", and that result will be returned to your program such that your automatic test can check for how your program reacts.
+
+Provision is included for switching between languages dynamically.
+
+Can optionally be made to be the top-most Window, to ensure it does not get hidden by other Windows and missed by the user.
+
+Can optionally make sounds that correspond to the type of message-box, either the system default sounds or a new custom set of which one set is provided.
+
+Can be given the default button styles, or a customized style - of which a set is provided.
+
+Can be directed to use the default icons, based upon the message type, or to use customized icons - of which a set is provided.
+
+Can put any of a dozen background textures by selecting from a simple enumeration-type.
+
+Can be made to automatically center itself over a parent Window.
+
+Intelligently detects a dual-monitor setup and avoids centering itself directly on the dividing-line between the two.
+
+Can optionally use the Windows Vista/7 Aeroglass effect.
+
+Can be made to use any of 8 standard buttons in any combination, or customized-text buttons.
+
+The API is modeled after that of the common MessageBox, for simplicity.
+
+The message-box can be shown asynchronously, in case you want to perform other tasks in your program while the user responds to the message-box.
+
+JhMessageBox is cross-platform compatible with SilverLight 5.
+
+JhMessageBox conforms to the upcoming Windows 8 Metro standard.
+
+A complete set of unit-tests are already written to ensure the error-free operation of JhMessageBox.
+
+All aspects of JhMessageBox are customizable, since it is a separate Window with properties for accessing every visual element and their properties.
+
+JhMessageBox is written in WPF, so it can automatically inherit the visual styles of the application that uses it.
+
+It can be used from a Windows Forms application just as easily as from WPF or SilverLight, and a Forms demo-application is provided to show how.
+
+It is compatible with the Jhenesis globalization tool.
+
+The two text areas intelligently re-adjust themselves as the text placed with them grows, affecting the margins, the scrollbars, and the vertical and horizontal alignments.
+
+It can detect when it is running on a touch-sensitive display, and optionally adapt itself to multi-touch operation so that it shows enlarged buttons designed specifically for touch operation, and detects when one has been touched.
+
+It provides a cancel method, such that an automated unit-test can allow the user to abort any automated tests that use this class. It aborts all message-boxes, disposes of them cleanly, and returns immediately.
+
+Provision is made for easily setting all of the default message-box options when your program starts.
+
+A demo-program is provided, so that you can instantly see the effects of all aspects of the API.
+

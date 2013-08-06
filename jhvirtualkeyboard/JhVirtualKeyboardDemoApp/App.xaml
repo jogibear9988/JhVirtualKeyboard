@@ -1,0 +1,8 @@
+﻿<Application x:Class="JhVirtualKeyboardDemoApp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ImageBrush x:Key="dialogBackgroundBrush" ImageSource="/JhVirtualKeyboardDemoApp;component/Images/TextureR40x40.png" Viewport="0,0,40,40" ViewportUnits="Absolute" Stretch="None" AlignmentX="Left" AlignmentY="Top" TileMode="Tile" />
+    </Application.Resources>
+</Application>

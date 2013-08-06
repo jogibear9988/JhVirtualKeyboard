@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{827FB93F-45CF-47AD-A728-62CB5573AFE3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JhVirtualKeyboard</RootNamespace>
+    <AssemblyName>JhVirtualKeyboard</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HelpFiles\SanskritVK.xaml.cs">
+      <DependentUpon>SanskritVK.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HelpFiles\TamilVK.xaml.cs">
+      <DependentUpon>TamilVK.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IInjectableControl.cs" />
+    <Compile Include="IVirtualKeyboardInjectable.cs" />
+    <Compile Include="ViewModels\KeyModel.cs" />
+    <Compile Include="KeyAssignmentSets\ArabicKeyAssignmentSet.cs" />
+    <Compile Include="KeyAssignmentSets\FrenchKeyAssignmentSet.cs" />
+    <Compile Include="KeyAssignmentSets\GermanKeyAssignmentSet.cs" />
+    <Compile Include="KeyAssignmentSets\KeyAssignmentSet.cs" />
+    <Compile Include="KeyAssignmentSets\RussianKeyAssignmentSet.cs" />
+    <Compile Include="KeyAssignmentSets\SanskritKeyAssignmentSet.cs" />
+    <Compile Include="KeyAssignmentSets\SpanishKeyAssignmentSet.cs" />
+    <Compile Include="KeyAssignmentSets\TamilKeyAssignmentSet.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrySettings.cs" />
+    <Compile Include="ViewModels\AltKeyViewModel.cs" />
+    <Compile Include="ViewModels\KeyboardViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValueConverters.cs" />
+    <Compile Include="ViewModels\KeyModelWithThreeGlyphs.cs" />
+    <Compile Include="ViewModels\KeyModelWithTwoGlyphs.cs" />
+    <Compile Include="ViewModels\ShiftKeyViewModel.cs" />
+    <Compile Include="VirtualKeyboard.xaml.cs">
+      <DependentUpon>VirtualKeyboard.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bgGreenTexture2.jpg" />
+    <Resource Include="Images\TextureR40x40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="HelpFiles\SanskritVK.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HelpFiles\TamilVK.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VirtualKeyboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Fonts\Quattrocento-Regular.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Q13x15.gif" />
+    <None Include="Sounds\tock_2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="JhLib\JhLib.csproj">
+      <Project>{bc955177-e070-4c54-9ad1-e7cac1c8fd3f}</Project>
+      <Name>JhLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

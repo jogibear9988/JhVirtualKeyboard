@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JhVirtualKeyboard.CapsLockToTextConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValueConverters.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="JhVirtualKeyboard.ShiftLockToTextConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValueConverters.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="JhVirtualKeyboard.WhichKBLayoutToStringConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="9.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValueConverters.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="JhVirtualKeyboard.KeyAssignmentSets.KeyAssignmentSet" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>P9GgAIKDwWDWP8NkkVUIhACRIA6AQ6BIdwBBMtC/w/8=</HashCode>
+      <FileName>KeyAssignmentSets\KeyAssignmentSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JhVirtualKeyboard.KeyAssignmentSets.RussianKeyAssignmentSet">
+    <Position X="1" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>PwAgAAAAAAACAAAAAAUAAAAAAAAAAQAAVgAAAMC/w/0=</HashCode>
+      <FileName>KeyAssignmentSets\RussianKeyAssignmentSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JhVirtualKeyboard.KeyAssignmentSets.FrenchKeyAssignmentSet">
+    <Position X="3.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAFgAAAACFAAE=</HashCode>
+      <FileName>KeyAssignmentSets\FrenchKeyAssignmentSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JhVirtualKeyboard.KeyAssignmentSets.SpanishKeyAssignmentSet">
+    <Position X="5.5" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAEAAAAAAUAAAAAAAIAAAAAFAAAAAAAAAg=</HashCode>
+      <FileName>KeyAssignmentSets\SpanishKeyAssignmentSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JhVirtualKeyboard.KeyAssignmentSets.GermanKeyAssignmentSet">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAEAAAAAAAIAAAAAFAAAAACAAQA=</HashCode>
+      <FileName>KeyAssignmentSets\GermanKeyAssignmentSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JhVirtualKeyboard.ViewModels.KeyModel" Collapsed="true">
+    <Position X="13" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQBAhQAQAACAYAEBACkQwwEAICAAAAMCAASGoAAwCA=</HashCode>
+      <FileName>ViewModels\KeyModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JhVirtualKeyboard.VirtualKeyboard" Collapsed="true">
+    <Position X="11.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAiIKYAgBBgCAAFRQANAtgwACCoAAAAgZAAUABIIABI=</HashCode>
+      <FileName>VirtualKeyboard.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JhVirtualKeyboard.ViewModels.KeyboardViewModel" Collapsed="true">
+    <Position X="10.25" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QIgAJQQAgaATZ4GqVoBmAgAECIWCDYUEwAYEkACRgAg=</HashCode>
+      <FileName>ViewModels\KeyboardViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JhVirtualKeyboard.RegistrySettings">
+    <Position X="9.25" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAEAAAAAAAAAAAAAgQAAAEAAAAAAA=</HashCode>
+      <FileName>RegistrySettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="JhVirtualKeyboard.IInjectableControl">
+    <Position X="12.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>IInjectableControl.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="JhVirtualKeyboard.IVirtualKeyboardInjectable">
+    <Position X="12.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IVirtualKeyboardInjectable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="JhVirtualKeyboard.WhichKeyboardLayout">
+    <Position X="10" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAABCAAACBAAAAQCAAAAAABBAAAAAQAAAAAAAAADA=</HashCode>
+      <FileName>VirtualKeyboard.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

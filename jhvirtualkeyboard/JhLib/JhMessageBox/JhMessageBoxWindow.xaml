@@ -1,0 +1,66 @@
+﻿<Window x:Class="JhLib.JhMessageBoxWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:jh="clr-namespace:JhLib"
+    mc:Ignorable="d" 
+    d:DesignHeight="155" d:DesignWidth="300"
+    Background="{Binding Path=BackgroundBrush}"
+    DataContext="{DynamicResource messageBoxViewModel}"
+    Height="{Binding Path=Height}"
+    MouseEnter="OnMouseEnter" MouseMove="OnMouseMove" MouseLeave="OnMouseLeave" 
+    Title="{Binding Path=Title, TargetNullValue=Nothing}"
+    Width="375" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
+
+    <Window.Resources>
+        <ObjectDataProvider x:Key="messageBoxViewModel" ObjectType="{x:Type jh:JhMessageBoxViewModel}" MethodName="get_Instance" />
+    </Window.Resources>
+
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem x:Name="miCopy" Command="{Binding CopyCommand}" Header="Copy to Clipboard"
+                ToolTip="Copy the text of this message-box to the Clipboard"/>
+            <MenuItem x:Name="miStay" Command="{Binding StayCommand}" Header="Stay"
+                ToolTip="Stay the timer so that this message-box will not close automatically." ToolTipService.ShowOnDisabled="True"/>
+        </ContextMenu>
+    </Window.ContextMenu>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Rectangle Name="rectUpper" Grid.RowSpan="{Binding Path=UpperRectangleRowSpan}" Visibility="{Binding Path=UpperRectangleVisibility}">
+            <Rectangle.Fill>
+                <LinearGradientBrush x:Name="brushUpperFill" StartPoint="0,0.5" EndPoint="1,0.5">
+                    <GradientStop x:Name="gradstopLeft" Color="{Binding Path=GradiantLeftColor}" Offset="0.0"/>
+                    <GradientStop x:Name="gradstopRight" Color="{Binding Path=GradiantRightColor}" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBox Name="txtSummaryText" AllowDrop="False" Background="{Binding Path=SummaryTextBackground}" BorderThickness="0"
+            FontSize="14" Foreground="{Binding Path=SummaryTextColor}" Grid.RowSpan="{Binding Path=SummaryTextRowSpan}"
+            Grid.ZIndex="2" HorizontalAlignment="Stretch" HorizontalContentAlignment="{Binding Path=SummaryTextHorizontalContentAlignment}" IsReadOnly="True"
+            Margin="{Binding Path=SummaryTextMargin}" Text="{Binding SummaryText}" TextWrapping="Wrap"
+            VerticalAlignment="Center" VerticalScrollBarVisibility="Auto"  />
+        <TextBox Name="txtDetailText" Background="{Binding Path=DetailTextBackground}" BorderThickness="0" Grid.Row="1"
+            HorizontalAlignment="Stretch" HorizontalContentAlignment="{Binding Path=DetailTextHorizontalContentAlignment}"
+            IsReadOnly="True" IsReadOnlyCaretVisible="True" Margin="{Binding Path=DetailTextMargin}"
+            Text="{Binding DetailText}" TextWrapping="Wrap"
+            VerticalContentAlignment="{Binding Path=DetailTextVerticalAlignment}" VerticalScrollBarVisibility="Auto" />
+        <Rectangle Name="rectBackgroundForButtonPanel" Fill="{Binding Path=ButtonPanelBackground}" Grid.Row="2" Height="41" />
+        <StackPanel Grid.Row="2" Height="41" HorizontalAlignment="Right" Orientation="Horizontal">
+            <Button Name="btnOk" Click="btnOK_Click" Content="{Binding ButtonOkText}" Height="23" Margin="{Binding Path=ButtonMargin}" ToolTip="{Binding ButtonOkToolTip}" Visibility="{Binding ButtonOkVisibility}" Width="{Binding ButtonWidth}" />
+            <Button Name="btnYes" Click="btnYes_Click" Content="{Binding ButtonYesText}" Height="23" Margin="{Binding Path=ButtonMargin}" ToolTip="{Binding ButtonYesToolTip}" Visibility="{Binding ButtonYesVisibility}" Width="{Binding ButtonWidth}" />
+            <Button Name="btnRetry" Click="btnRetry_Click" Content="{Binding ButtonRetryText}" Height="23" Margin="{Binding Path=ButtonMargin}" ToolTip="{Binding ButtonRetryToolTip}" Visibility="{Binding ButtonRetryVisibility}" Width="{Binding ButtonWidth}" />
+            <Button Name="btnNo" Click="btnNo_Click" Content="{Binding ButtonNoText}" Height="23" Margin="{Binding Path=ButtonMargin}" ToolTip="{Binding ButtonNoToolTip}" Visibility="{Binding ButtonNoVisibility}" Width="{Binding ButtonWidth}" />
+            <Button Name="btnIgnore" Click="btnIgnore_Click" Content="{Binding ButtonIgnoreText}" Height="23" Margin="{Binding Path=ButtonMargin}" ToolTip="{Binding ButtonIgnoreToolTip}" Visibility="{Binding ButtonIgnoreVisibility}" Width="{Binding ButtonWidth}" />
+            <Button Name="btnCancel" Click="btnCancel_Click" Content="{Binding ButtonCancelText}" Height="23" Margin="{Binding Path=ButtonMargin}" ToolTip="{Binding ButtonCancelToolTip}" Visibility="{Binding ButtonCancelVisibility}" Width="{Binding ButtonWidth}" />
+            <Button Name="btnClose" Click="btnClose_Click" Content="{Binding ButtonCloseText}" Height="23" Margin="{Binding Path=ButtonMargin}" ToolTip="{Binding ButtonCloseToolTip}" Visibility="{Binding ButtonCloseVisibility}" Width="{Binding ButtonWidth}" />
+        </StackPanel>
+        <Image Name="imgIcon" Grid.RowSpan="3" Grid.ZIndex="3" HorizontalAlignment="Left" Margin="{Binding Path=IconMargin}"
+            Source="{Binding Path=IconImage}" Stretch="None" UseLayoutRounding="True" VerticalAlignment="Top"  />
+    </Grid>
+</Window>

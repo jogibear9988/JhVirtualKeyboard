@@ -1,0 +1,66 @@
+Ensure that if the system suspends while a message-box is showing, that it does not immediately time-out when it wakes back up
+  -give the user a little time to at least respond to the message-box.
+
+Ensure the error and warning boxes do NOT have OK buttons! Read that reference link!
+
+In the windows forms test, the detail-text is positioned way to the right. It looks ugly!!!
+
+Should I add an Ignore button?  And an Abort?
+
+2012-06-23
+
+JhMessageBox
+A proper API design is not going to use a factory-method on the assembly JhMessageBox is in, to set global settings. Other programs may want to use that same facility.
+I should provide something in my App startup, which gets an instance of the JhMessageBox manager class, gives it it's particular settings,
+and then everything within that application accesses that manager object via the application instance.
+
+Ie, instead of JhMessageBox.SetDefaultOptions(..
+JhMessageBox.NotifyUser(..
+
+it should be
+
+within App.cs..
+  _interlocutionFacility = JhMessageBox.GetNewManager();
+  or
+  _interlocation = JhMessageBoxMgr.GetInstance();
+  and..
+
+  _interlocutionFacility.SetDefaultOptions(..
+
+  and
+
+  App.InterlocutionFacility.NotifyUser(
+
+The JhMessageBoxMgr object is the single point of entry into the entire API. This is for testability.
+
+
+
+For GreenTexture3, I believe I should put that texture on the button-area, and not on the text.
+
+1. Should add some unit-testing facilities to it (ie, to enable the creation of unit-tests for programs that use this).
+   These must be static..
+
+2. Ensure it works on Windows Forms.
+
+3. Don't provide ONLY detail-text!
+
+4. In Cider, the Window height is too great.
+
+5. For errors, showing the red gradiant - cannot see the blue Instruction text.
+
+6. Allow for custom buttons.
+
+7. Provide a user-guide.
+
+8. Consider the possibility that multiple programs may use this, and that the options set by one might interfere with the other.
+
+9. Account for the possibility of providing asynchronous operation.
+   Why?
+   Perhaps we want to let the user be looking at a message, or getting an answer from him,
+   while at the same time continuing with other tasks?
+
+10. Do we want to provide Ignore or Abort buttons also, or just allow for easy custom buttons?
+
+11. Replace the file-open std dialogs with WPF equivalents, then remove the reference to Windows.Forms
+
+12. Add a multi-touch-screen mode, whereby the buttons are visually a bit different, bigger, and sensitive to touch.

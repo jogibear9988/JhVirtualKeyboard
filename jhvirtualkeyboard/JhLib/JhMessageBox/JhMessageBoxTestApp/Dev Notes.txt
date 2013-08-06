@@ -1,0 +1,6 @@
+Need to add these references to your application project, if it does not reference them already:
+
+PresentationCore
+PresentationFramework
+System.xaml
+WindowsBase
